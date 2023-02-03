@@ -1,12 +1,281 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/f584623432.js" crossorigin="anonymous"></script>
+    <title>Manvendra Singh | Full Stack Web Developer</title>
 </head>
+
 <body>
-    Hii there
+    <div id="header">
+        <div class="container">
+            <nav>
+                <h1 style="font-size: 40px;"><span style="color: #0071f2;">m</span>anvendra.</h1>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="https://www.linkedin.com/in/themanvendra/" target="_blank">LinkedIn</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#potofolio">Potofolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><button class="toggle">Dark Mode</button></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="main">
+                <div class="header-text">
+                    <p>Full Stack Web Developer</p>
+                    <h1>Hi, I'm <span>Manvendra</span><br>Singh From India</h1>
+                </div>
+                <div class="header-img">
+                    <img src="./images/Software-Developer.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- about section -->
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="./images/passport_2.png" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Motivated and efficient Full-stack web developer with a history of education in Mechanical
+                        Engineering and an interest in coding. Working with MERN stack and programming languages like
+                        JavaScript catalyzed my curiosity for web development. I have worked in collaborative
+                        environments demonstrating my coding and interpersonal skills to meet deadlines. Looking forward
+                        for some interesting and challenging opportunities.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span><i class="fa-brands fa-html5"></i></span> HTML</li>
+                            <li><span><i class="fa-brands fa-css3-alt"></i></span> CSS</li>
+                            <li><span><i class="fa-brands fa-square-js"></i></span> JavaScript</li>
+                            <li><span><i class="fa-brands fa-node-js"></i></span> Node.js</li>
+                            <li><span><i class="fa-solid fa-circle-nodes"></i></span> Express.js</li>
+                            <li><span><i class="fa-sharp fa-solid fa-database"></i></span> MongoDB</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>1200+ Hours</span><br>Coding & Problem Solving</li>
+                            <li><span>120</span><br>Mini Projects</li>
+                            <li><span>3</span><br>Major Projects</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Full Stack Web Development (Full Time)</span><br>Masai School, Bengaluru <br> Sep
+                                2022 - April 2023</li>
+                            <li><span>Bachelor of Technology (Mechanical Engineering)</span><br>Shri Shankaracharya
+                                Institute of Professional Management and Technology, Raipur <br> Jul 2018 - May 2022
+                            </li>
+                            <li><span>Higher Secondary Education</span><br>Adarsh Vidyalaya, Raipur <br> Jul 2017 - June
+                                2018</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Potofolio -->
+    <div id="potofolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="./images/1.png" alt="">
+                    <div class="layer">
+                        <h3>David's Bridal Clone</h3>
+                        <p>David's Bridal is a clothier in the United States that specializes in wedding dresses, prom
+                            gowns, and other formal wear.</p>
+                        <a href="https://genuine-dieffenbachia-d7598c.netlify.app/" target="_blank"><i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./images/2.png" alt="">
+                    <div class="layer">
+                        <h3>OLX Clone</h3>
+                        <p>OLX is a web application that allows users to buy and sell used goods in their local area.
+                        </p>
+                        <a href="https://luminous-twilight-01a331.netlify.app/index.html" target="_blank"><i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./images/3.png" alt="">
+                    <div class="layer">
+                        <h3>Cronometer clone</h3>
+                        <p>A fitness app that allows users to track their calories, diet, exercise and health data.</p>
+                        <a href="https://earnest-vacherin-fa152b.netlify.app" target="_blank"><i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./images/4.png" alt="">
+                    <div class="layer">
+                        <h3>Note App</h3>
+                        <p>Manage your all notes at one place.</p>
+                        <a href="https://melodious-chebakia-b8d1b6.netlify.app/" target="_blank"><i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./images/5.png" alt="">
+                    <div class="layer">
+                        <h3>Analog Clock</h3>
+                        <p>Analog Clock which show time and date, available in dark & light mode.</p>
+                        <a href="https://stalwart-sherbet-64a857.netlify.app/" target="_blank"><i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./images/6.png" alt="">
+                    <div class="layer">
+                        <h3>Simple web app</h3>
+                        <p>Simple website with home & cart page and with some some funcunility</p>
+                        <a href="https://melodic-smakager-4fd4d1.netlify.app/" target="_blank"><i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./images/7.png" alt="">
+                    <div class="layer">
+                        <h3>Stopwatch App</h3>
+                        <p>Aesthetic Stopwatch web app.</p>
+                        <a href="https://polite-sprinkles-18b94e.netlify.app/" target="_blank"><i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./images/8.png" alt="">
+                    <div class="layer">
+                        <h3>Calculator</h3>
+                        <p>Online calculator for quick calculations.</p>
+                        <a href="https://cozy-sfogliatella-367369.netlify.app/" target="_blank"><i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./images/work-1.png" alt="">
+                    <div class="layer">
+                        <h3>Masai Employee Records</h3>
+                        <p>To keep records of employee.</p>
+                        <a href="https://hilarious-khapse-112220.netlify.app/" target="_blank"><i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./images/work-2.png" alt="">
+                    <div class="layer">
+                        <h3>Doctor's App</h3>
+                        <p>Doctor's Detail Page.</p>
+                        <a href="https://hilarious-khapse-112220.netlify.app/" target="_blank"><i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./images/9.png" alt="">
+                    <div class="layer">
+                        <h3>Todo</h3>
+                        <p>Simple todo web app.</p>
+                        <a href="https://masaitodolist.netlify.app/" target="_blank"><i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./images/10.png" alt="">
+                    <div class="layer">
+                        <h3>Digital Clock</h3>
+                        <p>Simple digital clock web app.</p>
+                        <a href="https://funny-heliotrope-d694c2.netlify.app/" target="_blank"><i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./images/11.png" alt="">
+                    <div class="layer">
+                        <h3>Keyboard Replica</h3>
+                        <p>Windows Keyboard</p>
+                        <a href="https://elegant-sundae-cefe0d.netlify.app/" target="_blank"><i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See more</a>
+        </div>
+    </div>
+
+    <!-- contact -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>b.manvendrasingh2000@gmail.com</p>
+                    <p><i class="fa-solid fa-square-phone"></i>+91 7067222518</p>
+                    <div class="social-icons">
+                        <a href="https://github.com/themanvendra00"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/themanvendra/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/the_manvendra_00/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    </div>
+                    <a href="https://drive.google.com/file/d/1RxDrehJAss-mb1PF4qcuFCkZulqlLaM2/view" download
+                        class="btn btn2">Download Resume</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="Email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright @ Manvendra Singh. Tech Stack used <i class="fa-brands fa-html5"></i>, <i
+                    class="fa-brands fa-css3-alt"></i> & <i class="fa-brands fa-square-js"></i></p>
+        </div>
+    </div>
 </body>
+
 </html>
+
+<script src="main.js"></script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwPP5Fr9TM1X5ZJ0k1aazx6VjT0c-CXFund1P4W8kkdcjxRCUo9PC1mNE7e5OgRVj1ZzA/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById('msg')
+
+    form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+            .then(response => {
+                msg.innerHTML = 'Message sent successfully'
+                setTimeout(function () {
+                    msg.innerHTML = ''
+                }, 5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+    })
+</script>
