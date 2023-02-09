@@ -40,3 +40,9 @@ function openmenu() {
 function closemenu() {
   sidemenu.style.right = "-200px";
 }
+// const username = "themanvendra00";
+GitHubCalendar(".calendar", "themanvendra00");
+
+// or enable responsive functionality:
+GitHubCalendar(".calendar", "themanvendra00", { responsive: true });
+
