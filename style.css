@@ -534,3 +534,12 @@ small {
     margin-top: 10px;
     cursor: pointer;
 }
+button{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+button:hover{
+    color: #fff;
+}
