@@ -12,7 +12,7 @@
 }
 
 :root {
-    --primary-color: #181818;
+    --primary-color: #000000;
     --secondary-color: #fff;
     --tertiary-color: #262626;
 }
@@ -125,7 +125,10 @@ nav ul li a:hover::after {
 .header-img img {
     width: 100%;
 }
-
+#skills{
+    /* background: #101010; */
+    padding: 60px 150px;
+}
 #about {
     padding: 80px 0;
     color: var(--secondary-color);
@@ -155,6 +158,7 @@ nav ul li a:hover::after {
 }
 
 .sub-title {
+    margin-top: -5px;
     font-size: 60px;
     font-weight: 600;
     color: var(--secondary-color);
@@ -200,9 +204,9 @@ nav ul li a:hover::after {
     cursor: pointer;
 }
 
-#skills ul li span {
+/* #skills ul li span {
     font-size: 20px;
-}
+} */
 
 .tab-contents {
     display: none;
@@ -265,8 +269,14 @@ nav ul li a:hover::after {
 .layer p {
     color: #fff;
 }
+.layer div{
+    /* border: 4px solid red; */
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
 
-.layer a {
+.layer div a {
     margin-top: 20px;
     color: #0071f2;
     text-decoration: none;
@@ -277,6 +287,12 @@ nav ul li a:hover::after {
     height: 60px;
     border-radius: 50%;
     text-align: center;
+}
+
+.layer div a:hover{
+    background: #030303;
+    transition: .5s;
+    transform: scale(1.1);
 }
 
 .work:hover img {
@@ -462,4 +478,10 @@ nav .fa-solid {
     color: #61b752;
     margin-top: -40px;
     display: block;
+}
+
+small{
+    color: #c6c6c6;
+    margin-top: 10px;
+    cursor: pointer;
 }

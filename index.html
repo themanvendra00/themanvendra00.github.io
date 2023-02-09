@@ -11,17 +11,20 @@
 </head>
 
 <body>
-    <div id="header">
+    <!-- <button class="toggle">Dark Mode</button> -->
+    <div id="home">
         <div class="container">
-            <nav>
+            <nav id="nav-menu">
                 <h1 style="font-size: 40px;"><span style="color: #0071f2;">m</span>anvendra.</h1>
                 <ul id="sidemenu">
-                    <li><a href="#header">Home</a></li>
-                    <li><a href="https://www.linkedin.com/in/themanvendra/" target="_blank">LinkedIn</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#potofolio">Potofolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><button class="toggle">Dark Mode</button></li>
+                    <li class="nav-link home"><a href="#home">Home</a></li>
+                    <li class="nav-link about"><a href="#about">About</a></li>
+                    <li class="nav-link skills"><a href="#skills">Skills</a></li>
+                    <li class="nav-link projects"><a href="#potofolio">Projects</a></li>
+                    <li class="nav-link contact"><a href="#contact">Contact</a></li>
+                    <li class="nav-link resume"><a
+                            href="https://drive.google.com/file/d/1RxDrehJAss-mb1PF4qcuFCkZulqlLaM2/view?usp=share_link"
+                            target="_blank">Resume</a></li>
                     <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
                 </ul>
                 <i class="fa-solid fa-bars" onclick="openmenu()"></i>
@@ -29,7 +32,7 @@
             <div class="main">
                 <div class="header-text">
                     <p>Full Stack Web Developer</p>
-                    <h1>Hi, I'm <span>Manvendra</span><br>Singh From India</h1>
+                    <h1 id="user-detail-name">Hi, I'm <span>Manvendra</span><br>Singh From India</h1>
                 </div>
                 <div class="header-img">
                     <img src="./images/Software-Developer.png" alt="">
@@ -40,26 +43,27 @@
 
     <!-- about section -->
 
-    <div id="about">
+    <div id="about" class="about section">
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
-                    <img src="./images/passport_2.png" alt="">
+                    <img src="./images/passport_2.png" alt="" class="home-img">
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
-                    <p>Motivated and efficient Full-stack web developer with a history of education in Mechanical
+                    <p id="user-detail-intro">Motivated and efficient Full-stack web developer with a history of
+                        education in Mechanical
                         Engineering and an interest in coding. Working with MERN stack and programming languages like
                         JavaScript catalyzed my curiosity for web development. I have worked in collaborative
                         environments demonstrating my coding and interpersonal skills to meet deadlines. Looking forward
                         for some interesting and challenging opportunities.</p>
 
                     <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <!-- <p class="tab-links active-link" onclick="opentab('skill')">Technical Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p> -->
+                        <p class="tab-links active-link" onclick="opentab('education')">Education</p>
                     </div>
-                    <div class="tab-contents active-tab" id="skills">
+                    <!-- <div class="tab-contents active-tab" id="skill">
                         <ul>
                             <li><span><i class="fa-brands fa-html5"></i></span> HTML</li>
                             <li><span><i class="fa-brands fa-css3-alt"></i></span> CSS</li>
@@ -75,8 +79,8 @@
                             <li><span>120</span><br>Mini Projects</li>
                             <li><span>3</span><br>Major Projects</li>
                         </ul>
-                    </div>
-                    <div class="tab-contents" id="education">
+                    </div> -->
+                    <div class="tab-contents active-tab" id="education">
                         <ul>
                             <li><span>Full Stack Web Development (Full Time)</span><br>Masai School, Bengaluru <br> Sep
                                 2022 - April 2023</li>
@@ -92,131 +96,167 @@
         </div>
     </div>
 
+    <div id="skills">
+        <h1 class="sub-title">Skills</h1>
+    </div>
+
 
     <!-- Potofolio -->
     <div id="potofolio">
         <div class="container">
             <h1 class="sub-title">My Work</h1>
             <div class="work-list">
-                <div class="work">
+
+                <div class="work project-card">
                     <img src="./images/1.png" alt="">
                     <div class="layer">
-                        <h3>David's Bridal Clone</h3>
-                        <p>David's Bridal is a clothier in the United States that specializes in wedding dresses, prom
+                        <h3 class="project-title">David's Bridal Clone</h3>
+                        <p class="project-description">David's Bridal is a clothier in the United States that
+                            specializes in wedding dresses, prom
                             gowns, and other formal wear.</p>
-                        <a href="https://genuine-dieffenbachia-d7598c.netlify.app/" target="_blank"><i
-                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+
+                        <small class="project-tech-stack"><strong>Tech Stack: </strong>
+                            <i class="fa-brands fa-html5"></i>
+                            <i class="fa-brands fa-css3-alt"></i>
+                            <i class="fa-brands fa-square-js"></i>
+                            <i class="fa-brands fa-node-js"></i>
+                            <i class="fa-solid fa-circle-nodes"></i>
+                            <i class="fa-sharp fa-solid fa-database"></i>
+                        </small>
+
+                        <div>
+                            <a href="https://genuine-dieffenbachia-d7598c.netlify.app/" target="_blank"
+                                class="project-deployed-link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            <a href="https://github.com/themanvendra00/simplistic-yam-3636" target="_blank"
+                                class="project-github-link"><i class="fa-brands fa-github"></i></a>
+                        </div>
                     </div>
                 </div>
-                <div class="work">
+
+                <div class="work project-card">
                     <img src="./images/2.png" alt="">
                     <div class="layer">
-                        <h3>OLX Clone</h3>
-                        <p>OLX is a web application that allows users to buy and sell used goods in their local area.
+                        <h3 class="project-title">OLX Clone</h3>
+                        <p class="project-description">OLX is a web application that allows users to buy and sell used
+                            goods in their local area.
                         </p>
-                        <a href="https://luminous-twilight-01a331.netlify.app/index.html" target="_blank"><i
+
+                        <small class="project-tech-stack"><strong>Tech Stack: </strong>
+                            <i class="fa-brands fa-html5"></i>
+                            <i class="fa-brands fa-css3-alt"></i>
+                            <i class="fa-brands fa-square-js"></i>
+                        </small>
+
+                        <div>
+                            <a href="https://luminous-twilight-01a331.netlify.app/index.html" target="_blank" class="project-deployed-link"><i
                                 class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                <a href="https://github.com/Sharath7104/flimsy-drain-9129" target="_blank"
+                                class="project-github-link"><i class="fa-brands fa-github"></i></a>
+                        </div>
                     </div>
                 </div>
-                <div class="work">
+                <div class="work project-card">
                     <img src="./images/3.png" alt="">
                     <div class="layer">
-                        <h3>Cronometer clone</h3>
-                        <p>A fitness app that allows users to track their calories, diet, exercise and health data.</p>
+                        <h3 class="project-title">Cronometer clone</h3>
+                        <p class="project-description">A fitness app that allows users to track their calories, diet,
+                            exercise and health data.</p>
                         <a href="https://earnest-vacherin-fa152b.netlify.app" target="_blank"><i
                                 class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
                 </div>
-                <div class="work">
+                <div class="work project-card">
                     <img src="./images/4.png" alt="">
                     <div class="layer">
-                        <h3>Note App</h3>
-                        <p>Manage your all notes at one place.</p>
+                        <h3 class="project-title">Note App</h3>
+                        <p class="project-description">Manage your all notes at one place.</p>
                         <a href="https://melodious-chebakia-b8d1b6.netlify.app/" target="_blank"><i
                                 class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
                 </div>
-                <div class="work">
+                <div class="work project-card">
                     <img src="./images/5.png" alt="">
                     <div class="layer">
-                        <h3>Analog Clock</h3>
-                        <p>Analog Clock which show time and date, available in dark & light mode.</p>
+                        <h3 class="project-title">Analog Clock</h3>
+                        <p class="project-description">Analog Clock which show time and date, available in dark & light
+                            mode.</p>
                         <a href="https://stalwart-sherbet-64a857.netlify.app/" target="_blank"><i
                                 class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
                 </div>
-                <div class="work">
+                <div class="work project-card">
                     <img src="./images/6.png" alt="">
                     <div class="layer">
-                        <h3>Simple web app</h3>
-                        <p>Simple website with home & cart page and with some some funcunility</p>
+                        <h3 class="project-title">Simple web app</h3>
+                        <p class="project-description">Simple website with home & cart page and with some some
+                            funcunility</p>
                         <a href="https://melodic-smakager-4fd4d1.netlify.app/" target="_blank"><i
                                 class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
                 </div>
-                <div class="work">
+                <!-- <div class="work project-card">
                     <img src="./images/7.png" alt="">
                     <div class="layer">
-                        <h3>Stopwatch App</h3>
-                        <p>Aesthetic Stopwatch web app.</p>
+                        <h3 class="project-title">Stopwatch App</h3>
+                        <p class="project-description">Aesthetic Stopwatch web app.</p>
                         <a href="https://polite-sprinkles-18b94e.netlify.app/" target="_blank"><i
                                 class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
-                </div>
-                <div class="work">
+                </div> -->
+                <div class="work project-card">
                     <img src="./images/8.png" alt="">
                     <div class="layer">
-                        <h3>Calculator</h3>
-                        <p>Online calculator for quick calculations.</p>
+                        <h3 class="project-title">Calculator</h3>
+                        <p class="project-description">Online calculator for quick calculations.</p>
                         <a href="https://cozy-sfogliatella-367369.netlify.app/" target="_blank"><i
                                 class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
                 </div>
-                <div class="work">
+                <!-- <div class="work project-card">
                     <img src="./images/work-1.png" alt="">
                     <div class="layer">
-                        <h3>Masai Employee Records</h3>
-                        <p>To keep records of employee.</p>
+                        <h3 class="project-title">Masai Employee Records</h3>
+                        <p class="project-description">To keep records of employee.</p>
                         <a href="https://hilarious-khapse-112220.netlify.app/" target="_blank"><i
                                 class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
-                </div>
-                <div class="work">
+                </div> -->
+                <!-- <div class="work project-card">
                     <img src="./images/work-2.png" alt="">
                     <div class="layer">
-                        <h3>Doctor's App</h3>
-                        <p>Doctor's Detail Page.</p>
+                        <h3 class="project-title">Doctor's App</h3>
+                        <p class="project-description">Doctor's Detail Page.</p>
                         <a href="https://hilarious-khapse-112220.netlify.app/" target="_blank"><i
                                 class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
-                </div>
-                <div class="work">
+                </div> -->
+                <div class="work project-card">
                     <img src="./images/9.png" alt="">
                     <div class="layer">
-                        <h3>Todo</h3>
-                        <p>Simple todo web app.</p>
+                        <h3 class="project-title">Todo</h3>
+                        <p class="project-description">Simple todo web app.</p>
                         <a href="https://masaitodolist.netlify.app/" target="_blank"><i
                                 class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
                 </div>
-                <div class="work">
+                <!-- <div class="work project-card">
                     <img src="./images/10.png" alt="">
                     <div class="layer">
-                        <h3>Digital Clock</h3>
-                        <p>Simple digital clock web app.</p>
+                        <h3 class="project-title">Digital Clock</h3>
+                        <p class="project-description">Simple digital clock web app.</p>
                         <a href="https://funny-heliotrope-d694c2.netlify.app/" target="_blank"><i
                                 class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
-                </div>
-                <div class="work">
+                </div> -->
+                <!-- <div class="work project-card">
                     <img src="./images/11.png" alt="">
                     <div class="layer">
-                        <h3>Keyboard Replica</h3>
-                        <p>Windows Keyboard</p>
+                        <h3 class="project-title">Keyboard Replica</h3>
+                        <p class="project-description">Windows Keyboard</p>
                         <a href="https://elegant-sundae-cefe0d.netlify.app/" target="_blank"><i
                                 class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
-                </div>
+                </div> -->
             </div>
             <a href="#" class="btn">See more</a>
         </div>
@@ -228,11 +268,13 @@
             <div class="row">
                 <div class="contact-left">
                     <h1 class="sub-title">Contact Me</h1>
-                    <p><i class="fa-solid fa-paper-plane"></i>b.manvendrasingh2000@gmail.com</p>
-                    <p><i class="fa-solid fa-square-phone"></i>+91 7067222518</p>
+                    <p id="contact-email"><i class="fa-solid fa-paper-plane"></i>b.manvendrasingh2000@gmail.com</p>
+                    <p id="contact-phone"><i class="fa-solid fa-square-phone"></i>+91 7067222518</p>
                     <div class="social-icons">
-                        <a href="https://github.com/themanvendra00"><i class="fa-brands fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/themanvendra/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/themanvendra00" id="contact-github"><i
+                                class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/themanvendra/" id="contact-linkedin"><i
+                                class="fa-brands fa-linkedin"></i></a>
                         <a href="https://www.instagram.com/the_manvendra_00/"><i class="fa-brands fa-instagram"></i></a>
                         <a href="#"><i class="fa-brands fa-facebook"></i></a>
                     </div>
@@ -251,7 +293,7 @@
             </div>
         </div>
         <div class="copyright">
-            <p>Copyright @ Manvendra Singh. Tech Stack used <i class="fa-brands fa-html5"></i>, <i
+            <p style="color: #fff;">Copyright @ Manvendra Singh. Tech Stack used <i class="fa-brands fa-html5"></i>, <i
                     class="fa-brands fa-css3-alt"></i> & <i class="fa-brands fa-square-js"></i></p>
         </div>
     </div>
