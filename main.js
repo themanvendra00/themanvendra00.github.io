@@ -15,7 +15,7 @@ var tabContents = document.getElementsByClassName("tab-contents");
 
 let docTitle = document.title;
 window.addEventListener("blur", () => {
-  document.title = "Come back : (";
+  document.title = "Hey have a look";
 });
 window.addEventListener("focus", () => {
   document.title = docTitle;
@@ -45,4 +45,10 @@ GitHubCalendar(".calendar", "themanvendra00");
 
 // or enable responsive functionality:
 GitHubCalendar(".calendar", "themanvendra00", { responsive: true });
+
+function NewTab(){
+  window.open(
+    "https://drive.google.com/file/d/1RxDrehJAss-mb1PF4qcuFCkZulqlLaM2/view?usp=share_link","_blank"
+  )
+}
 

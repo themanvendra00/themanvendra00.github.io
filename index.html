@@ -5,39 +5,51 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/fav.png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css" />
+    <link href='https://fonts.googleapis.com/css?family=Wire+One|Raleway:300' rel='stylesheet' type='text/css'>
     <script src="https://kit.fontawesome.com/f584623432.js" crossorigin="anonymous"></script>
     <title>Manvendra Singh | Full Stack Web Developer</title>
 </head>
 
 <body>
     <!-- <button class="toggle">Dark Mode</button> -->
+
+    <!-- ========================================   Nav Bar  ===================================================== -->
+
+    <div class="container fixed">
+        <nav id="nav-menu">
+            <h1 style="font-size: 40px;"><span style="color: #0071f2;">m</span>anvendra.</h1>
+            <ul id="sidemenu">
+                <li class="nav-link home"><a href="#home">Home</a></li>
+                <li class="nav-link about"><a href="#about">About</a></li>
+                <li class="nav-link skills"><a href="#skills">Skills</a></li>
+                <li class="nav-link projects"><a href="#projects">Projects</a></li>
+                <li class="nav-link contact"><a href="#contact">Contact</a></li>
+                <li class="nav-link resume"><a id="resume-button-1" onclick="NewTab()"
+                        href="./Manvendra-Singh-Resume.pdf" download="Manvendra-Singh-Resume">Resume</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+    </div>
+
+    <!-- ========================================   Nav Bar  ===================================================== -->
+
+    <!-- ========================================   Home section  ===================================================== -->
+
     <div id="home">
         <div class="container">
-
-            <nav id="nav-menu">
-                <h1 style="font-size: 40px;"><span style="color: #0071f2;">m</span>anvendra.</h1>
-                <ul id="sidemenu">
-                    <li class="nav-link home"><a href="#home">Home</a></li>
-                    <li class="nav-link about"><a href="#about">About</a></li>
-                    <li class="nav-link skills"><a href="#skills">Skills</a></li>
-                    <li class="nav-link projects"><a href="#projects">Projects</a></li>
-                    <li class="nav-link contact"><a href="#contact">Contact</a></li>
-                    <li class="nav-link resume" id="resume-button-1"><a id="resume-link-1"
-                            href="https://drive.google.com/file/d/1RxDrehJAss-mb1PF4qcuFCkZulqlLaM2/view?usp=share_link"
-                            target="_blank">Resume</a></li>
-                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
-                </ul>
-                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
-            </nav>
-
             <div class="main">
                 <div class="header-text">
                     <p>Full Stack Web Developer</p>
                     <h1 id="user-detail-name">Hi, I'm <span>Manvendra</span><br>Singh From India</h1>
-                    <a href="./Manvendra-Singh-Resume.pdf" download class="btn btn2" id="resume-link-2"
-                        style="font-size: 15px;"><button resume-button-2>Download Resume</button></a>
+                    <!-- <a href="./Manvendra-Singh-Resume.pdf" download class="btn btn2" id="resume-link-2"
+                        style="font-size: 15px;"><button resume-button-2>Download Resume</button></a> -->
+                    <a id="resume-button-1" onclick="NewTab()" class="btn btn2" id="resume-button-2"
+                        href="./Manvendra-Singh-Resume.pdf" download="Manvendra-Singh-Resume"
+                        style="font-size: 15px;">Download Resume</a>
                 </div>
                 <div class="header-img">
                     <img src="./images/Software-Developer.png" alt="">
@@ -47,7 +59,9 @@
         </div>
     </div>
 
-    <!-- about section -->
+    <!-- ========================================   Home section  ===================================================== -->
+
+    <!-- ========================================   About section  ===================================================== -->
 
     <div id="about" class="about section">
         <div class="container">
@@ -84,76 +98,89 @@
         </div>
     </div>
 
+
+    <!-- ========================================   About section  ===================================================== -->
+
+
+    <!-- ========================================   Skills section  ===================================================== -->
+
     <div id="skills">
-        <h1 class="sub-title">Skills</h1>
-        <h3 class="sub-skills">Teck Stacks</h3>
-        <div class="skills-list">
-            <div class="skills-card">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt=""
-                    class="skills-card-img center">
-                <h5 class="skills-card-name">HTML</h5>
+        <div class="container">
+            <h1 class="sub-title">Skills</h1>
+            <h3 class="sub-skills">Teck Stacks</h3>
+            <div class="skills-list">
+                <div class="skills-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt=""
+                        class="skills-card-img center">
+                    <h5 class="skills-card-name">HTML</h5>
+                </div>
+                <div class="skills-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt=""
+                        class="skills-card-img center">
+                    <h5 class="skills-card-name">CSS</h5>
+                </div>
+                <div class="skills-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg" alt=""
+                        class="skills-card-img center">
+                    <h5 class="skills-card-name">JavaScript</h5>
+                </div>
+                <div class="skills-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-plain.svg" alt=""
+                        class="skills-card-img center">
+                    <h5 class="skills-card-name">Node.js</h5>
+                </div>
+                <div class="skills-card">
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/v2.15.1/icons/express/express-original.svg"
+                        alt="" class="skills-card-img center">
+                    <h5 class="skills-card-name">Express.js</h5>
+                </div>
+                <div class="skills-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-plain.svg" alt=""
+                        class="skills-card-img center">
+                    <h5 class="skills-card-name">MongoDB</h5>
+                </div>
             </div>
-            <div class="skills-card">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt=""
-                    class="skills-card-img center">
-                <h5 class="skills-card-name">CSS</h5>
-            </div>
-            <div class="skills-card">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg" alt=""
-                    class="skills-card-img center">
-                <h5 class="skills-card-name">JavaScript</h5>
-            </div>
-            <div class="skills-card">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-plain.svg" alt=""
-                    class="skills-card-img center">
-                <h5 class="skills-card-name">Node.js</h5>
-            </div>
-            <div class="skills-card">
-                <img src="https://raw.githubusercontent.com/devicons/devicon/v2.15.1/icons/express/express-original.svg"
-                    alt="" class="skills-card-img center">
-                <h5 class="skills-card-name">Express.js</h5>
-            </div>
-            <div class="skills-card">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-plain.svg" alt=""
-                    class="skills-card-img center">
-                <h5 class="skills-card-name">MongoDB</h5>
+
+            <h3 class="sub-skills">Tools & Libraries</h3>
+            <div class="skills-list">
+                <div class="skills-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt=""
+                        class="skills-card-img center">
+                    <h5 class="skills-card-name">VScode</h5>
+                </div>
+                <div class="skills-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
+                        alt="" class="skills-card-img center">
+                    <h5 class="skills-card-name">Bootstrap</h5>
+                </div>
+                <div class="skills-card">
+                    <img src="https://www.svgrepo.com/show/217753/github.svg" alt="" class="skills-card-img center">
+                    <h5 class="skills-card-name">GitHub</h5>
+                </div>
+                <div class="skills-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt=""
+                        class="skills-card-img center">
+                    <h5 class="skills-card-name">Git</h5>
+                </div>
+                <div class="skills-card">
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/v2.15.1/icons/npm/npm-original-wordmark.svg"
+                        alt="" class="skills-card-img center">
+                    <h5 class="skills-card-name">npm</h5>
+                </div>
+                <div class="skills-card">
+                    <img src="https://cdn.iconscout.com/icon/free/png-512/netlify-3521601-2945045.png?f=avif&w=256"
+                        alt="" class="skills-card-img center">
+                    <h5 class="skills-card-name">Netlify</h5>
+                </div>
             </div>
         </div>
-
-        <h3 class="sub-skills">Tools & Libraries</h3>
-        <div class="skills-list">
-            <div class="skills-card">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt=""
-                    class="skills-card-img center">
-                <h5 class="skills-card-name">VScode</h5>
-            </div>
-            <div class="skills-card">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt=""
-                    class="skills-card-img center">
-                <h5 class="skills-card-name">Bootstrap</h5>
-            </div>
-            <div class="skills-card">
-                <img src="https://www.svgrepo.com/show/217753/github.svg" alt="" class="skills-card-img center">
-                <h5 class="skills-card-name">GitHub</h5>
-            </div>
-            <div class="skills-card">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt=""
-                    class="skills-card-img center">
-                <h5 class="skills-card-name">Git</h5>
-            </div>
-            <div class="skills-card">
-                <img src="https://raw.githubusercontent.com/devicons/devicon/v2.15.1/icons/npm/npm-original-wordmark.svg"
-                    alt="" class="skills-card-img center">
-                <h5 class="skills-card-name">npm</h5>
-            </div>
-            <div class="skills-card">
-                <img src="https://cdn.iconscout.com/icon/free/png-512/netlify-3521601-2945045.png?f=avif&w=256" alt=""
-                    class="skills-card-img center">
-                <h5 class="skills-card-name">Netlify</h5>
-            </div>
-        </div>
-
     </div>
+
+
+    <!-- ========================================   Skills section  ===================================================== -->
+
+
+    <!-- ========================================   Projects section  ===================================================== -->
 
 
     <!-- Potofolio -->
@@ -249,8 +276,8 @@
                         <div>
                             <a href="https://melodious-chebakia-b8d1b6.netlify.app/" target="_blank"
                                 class="project-deployed-link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                            <a href="https://github.com/masai-course/manvendra_singh_fw22_0236/tree/master/unit-4/sprint-4/day-1/you/FullStack%20App"
-                                target="_blank" class="project-github-link"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://github.com/themanvendra00/Aesthetic_Clock" target="_blank"
+                                class="project-github-link"><i class="fa-brands fa-github"></i></a>
                         </div>
                     </div>
                 </div>
@@ -347,25 +374,40 @@
         </div>
     </div>
 
-    <div id="github-stats">
-        <h1 class="sub-title">GitHub Statistics</h1>
-        <div>
-            <div class="calendar react-activity-calendar">
-                <!-- Loading stuff -->
-                Loading the data just for you.
-            </div>
-            <br>
-            <div class="stats">
-                <a href="https://github.com/themanvendra00/themanvendra00">
-                    <img 
-                        src="https://github-readme-stats.vercel.app/api?username=themanvendra00&show_icons=true&line_height=27&count_private=true&title_color=f48c06&text_color=c9cacc&icon_color=2bbc8a&bg_color=000000" id="github-streak-stats"/> 
-                    <img 
-                        src="https://github-readme-stats.vercel.app/api/top-langs/?username=themanvendra00&theme=highcontrast" id="github-top-langs"/>
-                </a>
+    <!-- ========================================   Projects section  ===================================================== -->
 
+
+    <!-- ========================================   GitHub section  ===================================================== -->
+
+
+
+    <div id="github-stats">
+        <div class="container">
+            <h1 class="sub-title">GitHub Statistics</h1>
+            <div>
+                <div class="calendar react-activity-calendar">
+                    <!-- Loading stuff -->
+                    Loading the data just for you.
+                </div>
+                <br>
+                <div class="stats">
+                    <a href="https://github.com/themanvendra00/themanvendra00">
+                        <img src="https://github-readme-stats.vercel.app/api?username=themanvendra00&show_icons=true&line_height=27&count_private=true&title_color=f48c06&text_color=c9cacc&icon_color=2bbc8a&bg_color=000000"
+                            id="github-streak-stats" />
+                        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=themanvendra00&theme=highcontrast"
+                            id="github-top-langs" />
+                    </a>
+
+                </div>
             </div>
         </div>
     </div>
+
+    <!-- ========================================   GitHub section  ===================================================== -->
+
+
+    <!-- ========================================   contact section  ===================================================== -->
+
 
     <!-- contact -->
     <div id="contact">
@@ -384,7 +426,7 @@
                         <a href="https://www.instagram.com/the_manvendra_00/"><i class="fa-brands fa-instagram"></i></a>
                         <a href="#"><i class="fa-brands fa-facebook"></i></a>
                     </div>
-                    <a href="./Manvendra-Singh-Resume.pdf" download id="resume-link-2" class="btn btn2">Download
+                    <a href="./Manvendra-Singh-Resume.pdf" download class="btn btn2">Download
                         Resume</a>
                 </div>
 
@@ -401,11 +443,14 @@
             </div>
         </div>
         <div class="copyright">
-            <p style="color: #fff;">Copyright @ Manvendra Singh. Tech Stack used <i class="fa-brands fa-html5"></i>, <i
-                    class="fa-brands fa-css3-alt"></i> & <i class="fa-brands fa-square-js"></i></p>
+            <p style="color: #fff;">Beware of bugs in the above code; I have only proved it correct, not tried it.</p>
         </div>
     </div>
 </body>
+
+
+<!-- ========================================   contact section  ===================================================== -->
+
 
 </html>
 
