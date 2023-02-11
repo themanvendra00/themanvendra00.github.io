@@ -583,11 +583,14 @@ nav .fa-solid {
     }
 
     .stats a img:first-child {
-        width: 80%;
+        width: 95%;
+    }
+    .stats a img:nth-child(4){
+        width: 95%;
     }
 
     .stats a img:last-child {
-        width: 50%;
+        width: 95%;
     }
 
     #github-stats {
@@ -668,11 +671,14 @@ nav .fa-solid {
     }
 
     .stats a img:first-child {
-        width: 80%;
+        width: 95%;
+    }
+    .stats a img:nth-child(4){
+        width: 95%;
     }
 
     .stats a img:last-child {
-        width: 50%;
+        width: 95%;
     }
 
     #github-stats {
