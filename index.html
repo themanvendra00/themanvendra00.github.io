@@ -19,17 +19,19 @@
 
     <!-- ============================================  Nav Bar  ===================================================== -->
 
-    <div class="container fixed">
-        <nav id="nav-menu">
+    <div id="nav-menu" class="container fixed">
+        <nav>
             <h1 style="font-size: 40px;"><span style="color: #0071f2;">m</span>anvendra.</h1>
             <ul id="sidemenu">
-                <li class="nav-link home"><a href="#home">Home</a></li>
+                <li class="nav-link home"><a class="active" href="#home">Home</a></li>
                 <li class="nav-link about"><a href="#about">About</a></li>
                 <li class="nav-link skills"><a href="#skills">Skills</a></li>
                 <li class="nav-link projects"><a href="#projects">Projects</a></li>
                 <li class="nav-link contact"><a href="#contact">Contact</a></li>
-                <li class="nav-link resume"><a id="resume-button-1" href="./Manvendra-Singh-Resume.pdf"
-                        download="Manvendra-Singh-Resume" onclick="NewTab()">Resume</a></li>
+                <li class="nav-link resume">
+                    <a id="resume-button-1" onclick="NewTab()" href="./Manvendra-Singh-Resume.pdf"
+                        download="Manvendra-Singh-Resume">Resume</a>
+                </li>
                 <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
             </ul>
             <i class="fa-solid fa-bars" onclick="openmenu()"></i>
@@ -128,8 +130,8 @@
                     <h5 class="skills-card-name">Node.js</h5>
                 </div>
                 <div class="skills-card">
-                    <img src="https://cdn.icon-icons.com/icons2/2699/PNG/512/expressjs_logo_icon_169185.png"
-                        alt="" class="skills-card-img center">
+                    <img src="https://cdn.icon-icons.com/icons2/2699/PNG/512/expressjs_logo_icon_169185.png" alt=""
+                        class="skills-card-img center">
                     <h5 class="skills-card-name">Express.js</h5>
                 </div>
                 <div class="skills-card">
