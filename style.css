@@ -81,9 +81,9 @@ nav {
     flex-wrap: wrap;
 }
 
-.logo {
-    width: 200px;
-}
+#nav-menu nav h1{
+        font-size: 40px;
+    }
 
 nav ul li {
     display: inline-block;
@@ -692,6 +692,9 @@ nav .fa-solid {
 
     .copyright {
         font-size: 14px;
+    }
+    #nav-menu nav h1{
+        font-size: 30px;
     }
 }
 
