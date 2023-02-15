@@ -81,9 +81,9 @@ nav {
     flex-wrap: wrap;
 }
 
-#nav-menu nav h1{
-        font-size: 40px;
-    }
+#nav-menu nav h1 {
+    font-size: 40px;
+}
 
 nav ul li {
     display: inline-block;
@@ -585,7 +585,8 @@ nav .fa-solid {
     .stats a img:first-child {
         width: 95%;
     }
-    .stats a img:nth-child(4){
+
+    .stats a img:nth-child(4) {
         width: 95%;
     }
 
@@ -595,6 +596,13 @@ nav .fa-solid {
 
     #github-stats {
         margin-bottom: -200px;
+    }
+
+    .skills-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        grid-gap: 40px;
+        margin-top: 20px;
     }
 }
 
@@ -673,7 +681,8 @@ nav .fa-solid {
     .stats a img:first-child {
         width: 95%;
     }
-    .stats a img:nth-child(4){
+
+    .stats a img:nth-child(4) {
         width: 95%;
     }
 
@@ -693,8 +702,16 @@ nav .fa-solid {
     .copyright {
         font-size: 14px;
     }
-    #nav-menu nav h1{
+
+    #nav-menu nav h1 {
         font-size: 30px;
+    }
+
+    .skills-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+        grid-gap: 40px;
+        margin-top: 20px;
     }
 }
 
