@@ -46,9 +46,9 @@ GitHubCalendar(".calendar", "themanvendra00");
 // or enable responsive functionality:
 GitHubCalendar(".calendar", "themanvendra00", { responsive: true });
 
-// function NewTab(){
-//   window.open(
-//     "https://drive.google.com/file/d/1RxDrehJAss-mb1PF4qcuFCkZulqlLaM2/view?usp=share_link"
-//   )
-// }
+function NewTab(){
+  window.open(
+    "https://drive.google.com/file/d/1RxDrehJAss-mb1PF4qcuFCkZulqlLaM2/view?usp=share_link","_blank"
+  )
+}
 
