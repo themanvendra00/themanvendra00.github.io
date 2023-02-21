@@ -491,7 +491,7 @@ nav .fa-solid {
         font-size: 35px;
     }
 
-    nav .fa-solid {
+    /* nav .fa-solid {
         display: block;
         font-size: 25px;
     }
@@ -519,7 +519,7 @@ nav .fa-solid {
         top: 25px;
         left: 25px;
         cursor: pointer;
-    }
+    } */
 
     .sub-title {
         font-size: 40px;
@@ -714,10 +714,12 @@ nav .fa-solid {
         grid-gap: 40px;
         margin-top: 20px;
     }
-    .contrib-column span{
+
+    .contrib-column span {
         font-size: 8px;
     }
-    .btn2{
+
+    .btn2 {
         padding: 8px 20px;
         border-radius: 4px;
         font-size: 14px;
