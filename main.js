@@ -46,9 +46,15 @@ GitHubCalendar(".calendar", "themanvendra00");
 // or enable responsive functionality:
 GitHubCalendar(".calendar", "themanvendra00", { responsive: true });
 
-function NewTab(){
-  window.open(
-    "https://drive.google.com/file/d/1RxDrehJAss-mb1PF4qcuFCkZulqlLaM2/view?usp=share_link","_blank"
-  )
-}
+// function NewTab(){
+//   window.open(
+//     "https://drive.google.com/file/d/1RxDrehJAss-mb1PF4qcuFCkZulqlLaM2/view?usp=share_link","_blank"
+//   )
+// }
 
+let resumebtn1=document.getElementById("resume-button-1").addEventListener("click",()=>{
+  window.location.assign("https://drive.google.com/file/d/1RxDrehJAss-mb1PF4qcuFCkZulqlLaM2/view?usp=share_link")
+})
+let resumebtn2=document.getElementById("resume-button-2").addEventListener("click",()=>{
+  window.location.assign("https://drive.google.com/file/d/1RxDrehJAss-mb1PF4qcuFCkZulqlLaM2/view?usp=share_link")
+})
