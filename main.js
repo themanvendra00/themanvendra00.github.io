@@ -1,17 +1,5 @@
 var tabLinks = document.getElementsByClassName("tab-links");
 var tabContents = document.getElementsByClassName("tab-contents");
-// const toggle = document.querySelector(".toggle");
-
-// toggle.addEventListener("click", (e) => {
-//   const html = document.querySelector("html");
-//   if (html.classList.contains("dark")) {
-//     html.classList.remove("dark");
-//     e.target.innerHTML = "Dark Mode";
-//   } else {
-//     html.classList.add("dark");
-//     e.target.innerHTML = "Light Mode";
-//   }
-// });
 
 let docTitle = document.title;
 window.addEventListener("blur", () => {
@@ -40,21 +28,26 @@ function openmenu() {
 function closemenu() {
   sidemenu.style.right = "-200px";
 }
+
 // const username = "themanvendra00";
 GitHubCalendar(".calendar", "themanvendra00");
 
 // or enable responsive functionality:
 GitHubCalendar(".calendar", "themanvendra00", { responsive: true });
 
-// function NewTab(){
-//   window.open(
-//     "https://drive.google.com/file/d/1RxDrehJAss-mb1PF4qcuFCkZulqlLaM2/view?usp=share_link","_blank"
-//   )
-// }
-
-let resumebtn1=document.getElementById("resume-button-1").addEventListener("click",()=>{
-  window.location.assign("https://drive.google.com/file/d/1RxDrehJAss-mb1PF4qcuFCkZulqlLaM2/view?usp=share_link")
-})
-let resumebtn2=document.getElementById("resume-button-2").addEventListener("click",()=>{
-  window.location.assign("https://drive.google.com/file/d/1RxDrehJAss-mb1PF4qcuFCkZulqlLaM2/view?usp=share_link")
-})
+let resumebtn1 = document
+  .getElementById("resume-button-1")
+  .addEventListener("click", () => {
+    window.open(
+      "https://drive.google.com/file/d/1RxDrehJAss-mb1PF4qcuFCkZulqlLaM2/view?usp=share_link",
+      "_blank"
+    );
+  });
+let resumebtn2 = document
+  .getElementById("resume-button-2")
+  .addEventListener("click", () => {
+    window.open(
+      "https://drive.google.com/file/d/1RxDrehJAss-mb1PF4qcuFCkZulqlLaM2/view?usp=share_link",
+      "_blank"
+    );
+  });
