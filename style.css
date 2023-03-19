@@ -494,14 +494,14 @@ nav .fa-solid {
         font-size: 35px;
     }
 
-    /* nav .fa-solid {
+    nav .fa-solid {
         display: block;
         font-size: 25px;
         cursor: pointer;
-    } */
+    }
 
 
-    /* nav ul {
+    nav ul {
         background: rgb(0, 113, 242);
         background: linear-gradient(139deg, rgba(0, 113, 242, 1) 0%, rgba(0, 66, 141, 1) 28%, rgba(0, 40, 86, 1) 65%, rgba(0, 0, 0, 1) 100%);
         position: fixed;
@@ -517,7 +517,7 @@ nav .fa-solid {
     nav ul li {
         display: block;
         margin: 25px;
-    } */
+    }
 
     nav ul .fa-solid {
         position: absolute;
@@ -583,10 +583,10 @@ nav .fa-solid {
         font-size: 40px;
     }
 
-    /* nav .fa-solid {
+    nav .fa-solid {
         display: block;
         font-size: 25px;
-    } */
+    }
 
     .stats a img:first-child {
         width: 95%;
@@ -624,10 +624,10 @@ nav .fa-solid {
         font-size: 35px;
     }
 
-    /* nav .fa-solid {
+    nav .fa-solid {
         display: block;
         font-size: 25px;
-    } */
+    }
 
     .row {
         margin-top: 50%;
@@ -638,7 +638,7 @@ nav .fa-solid {
         margin: auto;
     }
 
-    /* nav ul {
+    nav ul {
         background: rgb(0, 113, 242);
         background: linear-gradient(139deg, rgba(0, 113, 242, 1) 0%, rgba(0, 66, 141, 1) 28%, rgba(0, 40, 86, 1) 65%, rgba(0, 0, 0, 1) 100%);
         position: fixed;
@@ -654,7 +654,7 @@ nav .fa-solid {
     nav ul li {
         display: block;
         margin: 25px;
-    } */
+    }
 
     nav ul .fa-solid {
         position: absolute;
