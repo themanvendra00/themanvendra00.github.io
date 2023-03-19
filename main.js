@@ -35,19 +35,17 @@ GitHubCalendar(".calendar", "themanvendra00");
 // or enable responsive functionality:
 GitHubCalendar(".calendar", "themanvendra00", { responsive: true });
 
+// Resume Download function
 let resumebtn1 = document
   .getElementById("resume-button-1")
-  .addEventListener("click", () => {
-    window.open(
-      "https://drive.google.com/file/d/1RxDrehJAss-mb1PF4qcuFCkZulqlLaM2/view?usp=share_link",
-      "_blank"
-    );
-  });
+  .addEventListener("click", fun);
 let resumebtn2 = document
   .getElementById("resume-button-2")
-  .addEventListener("click", () => {
-    window.open(
-      "https://drive.google.com/file/d/1RxDrehJAss-mb1PF4qcuFCkZulqlLaM2/view?usp=share_link",
-      "_blank"
-    );
-  });
+  .addEventListener("click", fun);
+
+function fun() {
+  window.location.assign(
+    "https://drive.google.com/file/d/1RxDrehJAss-mb1PF4qcuFCkZulqlLaM2/view?usp=share_link",
+    "_blank"
+  );
+}
