@@ -44,7 +44,7 @@ let resumebtn2 = document
   .addEventListener("click", fun);
 
 function fun() {
-  window.location.assign(
+  window.open(
     "https://drive.google.com/file/d/1RxDrehJAss-mb1PF4qcuFCkZulqlLaM2/view?usp=share_link",
     "_blank"
   );
