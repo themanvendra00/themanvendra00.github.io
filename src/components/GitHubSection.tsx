@@ -62,10 +62,10 @@ export function GitHubSection() {
                 <GitHubCalendar
                   username={GITHUB_USER}
                   colorScheme="dark"
-                  fontSize={12}
+                  fontSize={10}
                   className="calendar"
-                  blockSize={11}
-                  blockMargin={3}
+                  blockSize={9}
+                  blockMargin={2}
                   showWeekdayLabels={["mon", "wed", "fri"]}
                   errorMessage="Could not load contributions. Try again later or view GitHub directly."
                 />

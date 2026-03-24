@@ -17,6 +17,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {
@@ -189,7 +190,7 @@ textarea:focus-visible {
 }
 
 .logo {
-  font-size: 1.25rem;
+  font-size: 1.75rem;
   font-weight: 700;
   letter-spacing: -0.03em;
   color: var(--text);
@@ -428,31 +429,21 @@ textarea:focus-visible {
   font-size: 0.875rem;
 }
 
-/* Skills — icon strip: horizontal flow with wrap (was missing layout, cards stacked as blocks) */
+/* Skills — icon strip: grid layout to align with skills grid below */
 .skills__icons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem 1.25rem;
-  justify-content: flex-start;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(5.5rem, 1fr));
+  gap: 1rem;
   width: 100%;
 }
 
 .skills__icons .skills-card {
-  flex: 0 0 auto;
-  width: 5.5rem;
-  max-width: calc(50% - 0.625rem);
+  width: 100%;
   padding: 0.75rem 0.5rem;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   text-align: center;
-}
-
-@media (min-width: 480px) {
-  .skills__icons .skills-card {
-    max-width: 5.5rem;
-  }
 }
 
 .skills__icons .skills-card-img {
@@ -661,6 +652,11 @@ a.github-card:hover,
 .github-calendar-wrap .react-activity-calendar__scroll-container {
   width: 100% !important;
   max-width: 100%;
+  scrollbar-width: none;
+}
+
+.github-calendar-wrap .react-activity-calendar__scroll-container::-webkit-scrollbar {
+  display: none;
 }
 
 /* Main heatmap SVG: use viewBox scaling to fill width */
@@ -795,3 +791,150 @@ a.github-card:hover,
 .site-footer p {
   margin: 0;
 }
+
+/* Modal Styles */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(4px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.modal-content {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  width: 100%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1.25rem;
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  line-height: 1;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: color 0.2s ease;
+  z-index: 10;
+}
+
+.modal-close:hover {
+  color: var(--text);
+}
+
+.modal-header {
+  padding: 2rem 2rem 1rem;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  background: var(--surface);
+  z-index: 5;
+}
+
+.modal-title {
+  margin: 0 0 0.5rem;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text);
+  padding-right: 2rem; /* space for close button */
+}
+
+.modal-body {
+  padding: 1.5rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.modal-section {
+  color: var(--text-muted);
+}
+
+.modal-section h3 {
+  color: var(--text);
+  font-size: 1.25rem;
+  margin: 0 0 0.75rem;
+  font-weight: 600;
+}
+
+.modal-section h4 {
+  color: var(--text);
+  font-size: 1.05rem;
+  margin: 1rem 0 0.5rem;
+  font-weight: 600;
+}
+
+.modal-section p {
+  margin: 0 0 0.75rem;
+  line-height: 1.6;
+}
+
+.modal-section ul {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.modal-section li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 640px) {
+  .modal-backdrop {
+    padding: 0;
+  }
+  
+  .modal-content {
+    max-height: 100vh;
+    height: 100vh;
+    border-radius: 0;
+    border: none;
+  }
+  
+  .modal-header {
+    padding: 1.5rem 1.5rem 1rem;
+  }
+  
+  .modal-body {
+    padding: 1.5rem;
+  }
+}
+
+/* Custom Scrollbar for Modal */
+.modal-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+  background: transparent;
+  margin-block: 0.5rem; /* Add some padding at top and bottom */
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 999px;
+  border: 2px solid var(--surface); /* Creates a bit of padding around the thumb */
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}

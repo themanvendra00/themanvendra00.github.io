@@ -16,7 +16,7 @@ export function About() {
           <div>
             <img
               className="home-img"
-              src="/images/avatar-placeholder.svg"
+              src="/images/profile.png"
               alt={profile.name}
               width={280}
               height={280}

@@ -1,6 +1,13 @@
-import { featuredProjects } from "../content/projects";
+import { useState } from "react";
+import { featuredProjects, type Project } from "../content/projects";
+import { ProjectModal } from "./ProjectModal";
 
 export function Projects() {
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [showAll, setShowAll] = useState(false);
+
+  const displayedProjects = showAll ? featuredProjects : featuredProjects.slice(0, 6);
+
   return (
     <section id="projects" className="section" aria-labelledby="projects-title">
       <div className="container">
@@ -11,7 +18,7 @@ export function Projects() {
           A small set of shipped projects — each repo is on my GitHub unless noted.
         </p>
         <div className="projects__grid">
-          {featuredProjects.map((project) => (
+          {displayedProjects.map((project) => (
             <article key={project.title} className="card project-card">
               <div className="project-card__media">
                 <img
@@ -34,28 +41,60 @@ export function Projects() {
                   ))}
                 </div>
                 <div className="project-card__links">
+                  {project.caseStudy && (
+                    <button
+                      className="btn btn--primary"
+                      style={{ padding: '0.4rem 0.75rem', fontSize: '0.8rem', marginRight: '0.5rem' }}
+                      onClick={() => setSelectedProject(project)}
+                    >
+                      Case Study
+                    </button>
+                  )}
                   <a
                     className="project-deployed-link"
                     href={project.liveUrl}
                     target="_blank"
                     rel="noopener noreferrer"
+                    style={{ alignSelf: 'center' }}
                   >
                     Live demo
                   </a>
-                  <a
-                    className="project-github-link"
-                    href={project.repoUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Source
-                  </a>
+                  {project.repoUrl && (
+                    <a
+                      className="project-github-link"
+                      href={project.repoUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ alignSelf: 'center' }}
+                    >
+                      Source
+                    </a>
+                  )}
                 </div>
               </div>
             </article>
           ))}
         </div>
+
+        {featuredProjects.length > 6 && (
+          <div style={{ textAlign: "center", marginTop: "2rem" }}>
+            <button
+              className="btn btn--primary"
+              onClick={() => setShowAll(!showAll)}
+              style={{ padding: "0.6rem 1.2rem", fontSize: "0.9rem" }}
+            >
+              {showAll ? "Show less" : "Show more"}
+            </button>
+          </div>
+        )}
       </div>
+
+      {selectedProject && (
+        <ProjectModal 
+          project={selectedProject} 
+          onClose={() => setSelectedProject(null)} 
+        />
+      )}
     </section>
   );
 }
