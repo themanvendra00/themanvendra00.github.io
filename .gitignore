@@ -1,6 +1,9 @@
 cypress/screenshots
 cypress/videos
 node_modules
+dist
+.env
+.env.local
 after_spec_results.json
 package-lock.json
 results.json
