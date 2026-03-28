@@ -45,5 +45,6 @@ export const profile = {
     github: "https://github.com/themanvendra00",
     githubUser: "themanvendra00",
     linkedin: "https://www.linkedin.com/in/themanvendra/",
+    instagram: "https://www.instagram.com/codewithmanvendra/",
   },
 };
