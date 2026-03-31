@@ -2,6 +2,16 @@ import { profile } from "../content/profile";
 
 export function Hero() {
   const { resume } = profile;
+  const onResumeClick = () => {
+    // Ensure "new tab" + "download" behavior is consistent across browsers.
+    window.open(resume.publicPath, "_blank", "noopener,noreferrer");
+    const a = document.createElement("a");
+    a.href = resume.publicPath;
+    a.download = resume.fileName;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+  };
 
   return (
     <section id="home" className="hero" aria-labelledby="user-detail-name">
@@ -24,6 +34,7 @@ export function Hero() {
                   download={resume.fileName}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={onResumeClick}
                 >
                   Download resume
                 </a>

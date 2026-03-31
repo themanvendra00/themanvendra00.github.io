@@ -7,6 +7,16 @@ export function Contact() {
     import.meta.env.VITE_CONTACT_FORM_URL ?? DEFAULT_CONTACT_FORM_URL;
   const [status, setStatus] = useState<"idle" | "ok" | "err">("idle");
 
+  const onResumeDownloadClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const a = document.createElement("a");
+    a.href = profile.resume.publicPath;
+    a.download = profile.resume.fileName;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+  };
+
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const form = e.currentTarget;
@@ -48,8 +58,7 @@ export function Contact() {
               style={{ marginTop: "1rem", display: "inline-flex" }}
               href={profile.resume.publicPath}
               download={profile.resume.fileName}
-              target="_blank"
-              rel="noopener noreferrer"
+              onClick={onResumeDownloadClick}
             >
               Download resume
             </a>

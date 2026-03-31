@@ -28,4 +28,16 @@ export const skillGroups: SkillGroup[] = [
     label: "AI-assisted development",
     items: ["Cursor", "Claude Code", "Antigravity", "Faster iteration with safe review"],
   },
+  {
+    label: "Soft skills",
+    items: [
+      "Project Management",
+      "Result Oriented",
+      "Remote Collaboration",
+      "Communication Skills",
+      "Adaptability",
+      "Problem-Solving",
+      "Time Management",
+    ],
+  },
 ];

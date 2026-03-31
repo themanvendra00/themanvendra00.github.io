@@ -14,6 +14,17 @@ const navLinks = [
 export function Header() {
   const [open, setOpen] = useState(false);
 
+  const onResumeClick = () => {
+    window.open(resume.publicPath, "_blank", "noopener,noreferrer");
+    const a = document.createElement("a");
+    a.href = resume.publicPath;
+    a.download = resume.fileName;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    setOpen(false);
+  };
+
   useEffect(() => {
     const onResize = () => {
       if (window.innerWidth > 900) setOpen(false);
@@ -59,7 +70,7 @@ export function Header() {
                   download={resume.fileName}
                   target="_blank"
                   rel="noopener noreferrer"
-                  onClick={() => setOpen(false)}
+                  onClick={onResumeClick}
                 >
                   Resume
                 </a>
