@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, type MouseEvent } from "react";
 import { profile } from "../content/profile";
 
 const { resume } = profile;
@@ -14,7 +14,8 @@ const navLinks = [
 export function Header() {
   const [open, setOpen] = useState(false);
 
-  const onResumeClick = () => {
+  const onResumeClick = (e: MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
     window.open(resume.publicPath, "_blank", "noopener,noreferrer");
     const a = document.createElement("a");
     a.href = resume.publicPath;

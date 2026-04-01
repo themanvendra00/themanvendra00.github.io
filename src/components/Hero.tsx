@@ -1,8 +1,10 @@
+import type { MouseEvent } from "react";
 import { profile } from "../content/profile";
 
 export function Hero() {
   const { resume } = profile;
-  const onResumeClick = () => {
+  const onResumeClick = (e: MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
     // Ensure "new tab" + "download" behavior is consistent across browsers.
     window.open(resume.publicPath, "_blank", "noopener,noreferrer");
     const a = document.createElement("a");
